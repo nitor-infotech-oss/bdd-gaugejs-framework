@@ -1,0 +1,75 @@
+
+<!-- saved from url=(0081)file:///C:/Users/ANUP~1.MAN/AppData/Local/Temp/markdown-80162hk5qao.g48zd7vi.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body><h1 id="agnes-test-automation-framework-and-testsuite">Agnes Test Automation Framework and TestSuite</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="file:///C:/Users/ANUP~1.MAN/AppData/Local/Temp/markdown-80162hk5qao.g48zd7vi.html#agnes-test-automation-framework-and-testsuite">Agnes Middleware Test Automation Framework and TestSuite</a><ul>
+<li><a href="file:///C:/Users/ANUP~1.MAN/AppData/Local/Temp/markdown-80162hk5qao.g48zd7vi.html#setup">Setup</a></li>
+<li><a href="file:///C:/Users/ANUP~1.MAN/AppData/Local/Temp/markdown-80162hk5qao.g48zd7vi.html#gulp">Gulp</a></li>
+<li><a href="file:///C:/Users/ANUP~1.MAN/AppData/Local/Temp/markdown-80162hk5qao.g48zd7vi.html#usage">Usage</a></li>
+<li><a href="file:///C:/Users/ANUP~1.MAN/AppData/Local/Temp/markdown-80162hk5qao.g48zd7vi.html#agnes-structure">Agnes Structure</a></li>
+<li><a href="file:///C:/Users/ANUP~1.MAN/AppData/Local/Temp/markdown-80162hk5qao.g48zd7vi.html#developing-tests">Developing Tests</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="setup">Setup</h2>
+<p>Follow below steps:</p>
+<ol>
+<li>Install <a href="https://docs.npmjs.com/getting-started/installing-node">NodeJS and NPM</a></li>
+<li>Unzip the framework code</li>
+<li>Go to root directory of framework code. Lets call this root as <code>&lt;projectRoot&gt;</code></li>
+<li>On command line: <code>npm install</code></li>
+<li>Install <a href="https://www.npmjs.com/package/gulp-cli">Gulp</a> command line</li>
+<li>Install <a href="https://getgauge.io/get-started.html">Gauge</a> .While installation, dont select any runners.</li>
+<li>Install Javascript runner for gauge using command line: <code>gauge --install js</code></li>
+<li>Verify that runner is installed using: <code>gauge -v</code></li>
+<li>Install Gauge html-report plugin using: <code>gauge --install html-report</code></li>
+<li>if Mobile Automation is required then Install <a href="http://appium.io/">Appium</a> </li>
+</ol>
+<p>Additional installation steps for Oracle client to work:</p>
+<ol>
+<li>Do a step by step installation provided on <a href="https://community.oracle.com/docs/DOC-931127">link</a> till step “IV Set Environment Variables”</li>
+<li>Unzip your folder</li>
+<li>Run npm install (this will install oracle dependencies as well)</li>
+<li>Add DB credentials in env/qa/qa.properties</li>
+<li>Run “gauge –verbose –env QA –tags db specs/</li>
+</ol>
+<h2 id="gulp">Gulp</h2>
+<p>Gulp is being used as task runner along with NPM as package manager. As of now there are no tasks in npm like transpile, build, lint etc. However, users can feel free to configure/develop and integrate such tasks in package.json. Most of tasks are handled through Gulp. Various tasks added are:</p>
+<ol>
+<li>Installation and Start of selenium : if selenium is installed, this will not install it</li>
+<li>Transpilation: Existing scripts are written in es2015 and hence es2015 preset is used for Babel transpilation</li>
+<li>Test: Various test tasks(uiTest, restTest, mobileTest) are built in to represent how different automation can be executed directly from single tool</li>
+</ol>
+<p><strong>Logger</strong> : There is <a href="https://github.com/winstonjs/winston">winston</a> logger integrated in gulp to log all the build activity information. </p>
+<h2 id="usage">Usage</h2>
+<p>Follow below steps for executing template tests already built in framework:</p>
+<ol>
+<li>For executing UI tests: <code>gulp uiTest</code></li>
+<li>For executing REST tests: <code>gulp restTest</code></li>
+<li>Start Appium via command-line before executing Mobile tests:  <code>appium</code></li>
+<li>For executing Mobile tests: <code>gulp mobileTest</code></li>
+</ol>
+<h2 id="agnes-structure">Agnes Structure</h2>
+<p>Agnes is built on top of <a href="https://getgauge.io/">Gauge</a> and follows <a href="https://github.com/SeleniumHQ/selenium/wiki/PageObjects">Page Object</a> pattern for all types of representations (web pages, db tables, rest api, mobile screens) for better reusability, readability and organization of object repository and tests.  Tests are usually built on top of page objects</p>
+<h2 id="developing-tests">Developing Tests</h2>
+<h3 id="common-library">Common Library</h3>
+<p>Common functions/Utility functions(DB Client, Rest Client, Loggers, Data Readers) can be added here <code>&lt;projectRoot&gt;/src/common</code></p>
+<h3 id="page-objects">Page Objects</h3>
+<p>Before you start writing tests, it would be prudent build required page objects. Depending on type of page object need to be built, they can developed at following locations: <code>&lt;projectRoot&gt;/src/db_query_objects</code><br><code>&lt;projectRoot&gt;/src/mobile_page_objects</code><br><code>&lt;projectRoot&gt;/src/rest_service_objects</code><br><code>&lt;projectRoot&gt;/src/ui_page_objects</code></p>
+<h3 id="specs">Specs</h3>
+<p>Specs are developed  in <code>&lt;projectRoot&gt;/specs</code> folder. There are already few specs written in markdown format. They are organized in different folders as per type of testing(db, rest, ui, mobile).  Guide on writing specs is present <a href="https://docs.getgauge.io/longstart.html#">here</a>. Features added in specs examples:</p>
+<ol>
+<li>Tags - You will notice different tags present in specs to distinguish different types of testing during execution.</li>
+<li>Tables - There are various inline and external table references present in various specs</li>
+<li>Parameterization - Almost all specs have data parameterization in-built.</li>
+</ol>
+<h3 id="tests">Tests</h3>
+<p>Tests are developed in <code>&lt;projectRoot&gt;/src/tests</code></p>
+<h3 id="resources">Resources</h3>
+<p>There are two forms non-code resources present in framework.  These resources are picked up and read from different locations based on <code>env</code> parameter. This parameter is provided to framework/project via command line. Refer various gulp test tasks, you will see command line with environment provided - '<code>gauge --env qa --verbose --tags ui specs/'</code></p>
+<ol>
+<li><strong>Config</strong> - Present at <code>&lt;projectRoot&gt;/env/&lt;env&gt;/&lt;env&gt;.properties</code>.  For example, <code>/env/qa/qa.properties</code> can be referred. There are various values that can be set here which are specific environment. For example - Db credentials, Web Urls, TestData path</li>
+<li><strong>Test Data</strong> - Present at <code>&lt;projectRoot&gt;/resources&lt;env&gt;</code></li>
+</ol>
+</body></html>
