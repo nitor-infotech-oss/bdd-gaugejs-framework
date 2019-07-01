@@ -11,7 +11,7 @@ var assert = require("assert");
 
 gauge.step("Do login with rest call", function(done){
 	var loginObj = new LoginService();
-	var baseUrl = "https://qa2-greyhound-webapi.healthmine.com/api";
+	var baseUrl = "";
 	var authBody = {
 		"username": "akana400@noreply.com",
 		"password": "Orbita11",
