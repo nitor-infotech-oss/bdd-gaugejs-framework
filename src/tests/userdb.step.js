@@ -1,4 +1,4 @@
-'use strict';
+/* 'use strict';
 
 import UserDb from '../db_query_objects/users.db';
 
@@ -16,4 +16,4 @@ gauge.step("Get unregistered users", function (done) {
 	userDbObj.getUnregisteredUsers().then(function () {
 		done();
 	});
-});
+}); */

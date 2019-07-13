@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
     <meta charset="utf-8" />
     <title>Gauge Test Results</title>
-    <link rel="shortcut icon" type="image/x-icon" href="..\../images/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="..\../css/open-sans.css">
-    <link rel="stylesheet" type="text/css" href="..\../css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="..\../css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="..\../css/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../../css/open-sans.css">
+    <link rel="stylesheet" type="text/css" href="../../css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="../../css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
   </head>
   <body>
   <header class="top">
     <div class="header">
       <div class="container">
         <div class="logo">
-          <a href="..\.."><img src="..\../images/logo.png" alt="Report logo"></a>
+          <a href="../.."><img src="../../images/logo.png" alt="Report logo"></a>
         </div>
-        <h2 class="project">Project: Agnes</h2>
+        <h2 class="project">Project: bdd-gaugejs-framework</h2>
       </div>
     </div>
   </header>
@@ -30,22 +30,22 @@
   <div class="report-overview">
     <div class="report_chart">
       <div class="chart">
-        <svg id="pie-chart" data-results="0,1,0" data-total="1">
+        <svg id="pie-chart" data-results="0,4,3" data-total="7">
           <path class="status failed" />
-          <path class="shadow failed" data-status="failed"><title>Failed: 0/1</title></path>
+          <path class="shadow failed" data-status="failed"><title>Failed: 0/7</title></path>
           <path class="status passed" />
-          <path class="shadow passed" data-status="passed"><title>Passed: 1/1</title></path>
+          <path class="shadow passed" data-status="passed"><title>Passed: 4/7</title></path>
           <path class="status skipped" />
-          <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/1</title></path>
+          <path class="shadow skipped" data-status="skipped"><title>Skipped: 3/7</title></path>
         </svg>
       </div>
-      <div class="total-specs"><span class="value">1</span><span class="txt">Total specs</span></div>
+      <div class="total-specs"><span class="value">7</span><span class="txt">Total specs</span></div>
     </div>
     <div class="report_test-results">
       <ul>
         <li class="fail spec-filter" data-status="failed"><span class="value">0</span><span class="txt">Failed</span></li>
-        <li class="pass spec-filter" data-status="passed"><span class="value">1</span><span class="txt">Passed</span></li>
-        <li class="skip spec-filter" data-status="skipped"><span class="value">0</span><span class="txt">Skipped</span></li>
+        <li class="pass spec-filter" data-status="passed"><span class="value">4</span><span class="txt">Passed</span></li>
+        <li class="skip spec-filter" data-status="skipped"><span class="value">3</span><span class="txt">Skipped</span></li>
       </ul>
     </div>
     <div class="report_details">
@@ -56,23 +56,21 @@
         </li>
         
         <li>
-          <label>Tags </label>
-          <span>rest</span>
-        </li>
-        
-        <li>
           <label>Success Rate </label>
-          <span>100%</span>
+          <span>57%</span>
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:00:05</span>
+          <span>00:00:31</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Apr 26, 2018 at 9:52pm</span>
+          <span>Jul 13, 2019 at 9:44pm</span>
         </li>
       </ul>
+      
+  
+
       
   
 
@@ -97,12 +95,66 @@
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
+          <a href="../ui/google_puppeteer.html">
+             
+              <li class='skipped spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Search terms on google</span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
+          <a href="../db/usermanagement.db.html">
+             
+              <li class='skipped spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">UserManagement DB Spec</span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
+          <a href="../mobile/mobile.html">
+             
+              <li class='skipped spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Mobile Spec</span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
+          <a href="../ui/angular_site.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">UI tests for Angular Web Site (https://angular.realworld.io)</span>
+              <span id="time" class="time">00:00:25</span>
+            </li>
+          </a>
+          
+          <a href="../dd/diseaseidentification.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Disease Identification tests for BCKC</span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
           <a href="posts.ws.html">
              
               <li class='passed spec-name'>
             
               <span id="scenarioName" class="scenarioname">Posts retrieval tests</span>
-              <span id="time" class="time">00:00:05</span>
+              <span id="time" class="time">00:00:04</span>
+            </li>
+          </a>
+          
+          <a href="../ui/google.search.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Search terms on google</span>
+              <span id="time" class="time">00:00:28</span>
             </li>
           </a>
           
@@ -117,7 +169,7 @@
   <div id="specificationContainer" class="details">
     <header class="curr-spec">
       <div class="spec-head-wrapper">
-        <h3 class="spec-head" title="D:\TCOE\TCOE Practice\TCoE-Automation-Workspace\Agnes\specs\rest\posts.ws.md">Posts retrieval tests</h3>
+        <h3 class="spec-head" title="D:\NitorGitHubRepos\bdd-gaugejs-framework\specs\rest\posts.ws.md">Posts retrieval tests</h3>
         <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
             <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
@@ -129,12 +181,12 @@
       <div class="spec-meta">
         <div class="spec-filename">
           <label for="specFileName">File Path</label>
-          <input id="specFileName" value="D:\TCOE\TCOE Practice\TCoE-Automation-Workspace\Agnes\specs\rest\posts.ws.md" readonly/>
+          <input id="specFileName" value="D:\NitorGitHubRepos\bdd-gaugejs-framework\specs\rest\posts.ws.md" readonly/>
           <button class="clipboard-btn" data-clipboard-target="#specFileName" title="Copy to Clipboard">
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:05</span>
+        <span class="time">00:00:04</span>
       </div>
 
 	
@@ -156,16 +208,13 @@
   
 
     
+    
 
     <div class="content">
     
   
   <span><p>This spec checks for posts public API</p>
 </span>
-  
-  <span></span>
-  
-  <span></span>
   
   
 
@@ -180,12 +229,15 @@
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Get posts with and without id</h3>
-    <span class="time">00:00:03</span>
+    <span class="time">00:00:02</span>
 
 	
   
 
 	</div>
+  
+  
+
   
   
 
@@ -216,6 +268,9 @@
 
   
   
+
+  
+  
   
     
       <span>
@@ -227,8 +282,14 @@
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -257,6 +318,9 @@
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -284,8 +348,14 @@
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -294,6 +364,9 @@
     
   
 
+  
+
+  
   
 
   
@@ -314,12 +387,15 @@
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Add post successfully</h3>
-    <span class="time">00:00:02</span>
+    <span class="time">00:00:01</span>
 
 	
   
 
 	</div>
+  
+  
+
   
   
 
@@ -335,7 +411,7 @@
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:02</span>
+      <span class='time'>Execution Time : 00:00:01</span>
     </h5>
   
   <div class='step-info passed'>
@@ -344,6 +420,9 @@
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -371,8 +450,14 @@
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -381,6 +466,9 @@
     
   
 
+  
+
+  
   
 
   
@@ -401,6 +489,7 @@
   
 
     
+    
     </div>
   
 
@@ -418,15 +507,15 @@
 
 	
     <script type="text/javascript">
-      var loadingImage = "..\../images/loading.gif";
-      var closeButton = "..\../images/close.gif";
+      var loadingImage = "../../images/loading.gif";
+      var closeButton = "../../images/close.gif";
     </script>
-    <script src="..\../js/lightbox.js"></script>
-    <script src="..\../js/jquery-3.1.0.min.js" type="text/javascript"></script>
-    <script src="..\../js/auto-complete.min.js" type="text/javascript"></script>
-    <script src="..\../js/clipboard.min.js" type="text/javascript"></script>
-    <script src="..\../js/search_index.js" type="text/javascript"></script>
-    <script src="..\../js/main.js" type="text/javascript"></script>
+    <script src="../../js/lightbox.js"></script>
+    <script src="../../js/jquery-3.1.0.min.js" type="text/javascript"></script>
+    <script src="../../js/auto-complete.min.js" type="text/javascript"></script>
+    <script src="../../js/clipboard.min.js" type="text/javascript"></script>
+    <script src="../../js/search_index.js" type="text/javascript"></script>
+    <script src="../../js/main.js" type="text/javascript"></script>
     </body>
   </html>
 

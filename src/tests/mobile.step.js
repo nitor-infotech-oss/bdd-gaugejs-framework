@@ -1,4 +1,4 @@
-'use strict';
+/* 'use strict';
 import BKCHomeScreen from '../mobile_page_objects/bkchome.screen';
 import BKCLoginScreen from '../mobile_page_objects/bkclogin.screen';
 
@@ -33,3 +33,4 @@ gauge.step("Open app screen and go to login page", function (done) {
 });
 
 
+ */

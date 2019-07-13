@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
     <meta charset="utf-8" />
     <title>Gauge Test Results</title>
-    <link rel="shortcut icon" type="image/x-icon" href="..\../images/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="..\../css/open-sans.css">
-    <link rel="stylesheet" type="text/css" href="..\../css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="..\../css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="..\../css/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../../css/open-sans.css">
+    <link rel="stylesheet" type="text/css" href="../../css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="../../css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" />
   </head>
   <body>
   <header class="top">
     <div class="header">
       <div class="container">
         <div class="logo">
-          <a href="..\.."><img src="..\../images/logo.png" alt="Report logo"></a>
+          <a href="../.."><img src="../../images/logo.png" alt="Report logo"></a>
         </div>
-        <h2 class="project">Project: Agnes</h2>
+        <h2 class="project">Project: bdd-gaugejs-framework</h2>
       </div>
     </div>
   </header>
@@ -30,22 +30,22 @@
   <div class="report-overview">
     <div class="report_chart">
       <div class="chart">
-        <svg id="pie-chart" data-results="1,0,0" data-total="1">
+        <svg id="pie-chart" data-results="0,4,3" data-total="7">
           <path class="status failed" />
-          <path class="shadow failed" data-status="failed"><title>Failed: 1/1</title></path>
+          <path class="shadow failed" data-status="failed"><title>Failed: 0/7</title></path>
           <path class="status passed" />
-          <path class="shadow passed" data-status="passed"><title>Passed: 0/1</title></path>
+          <path class="shadow passed" data-status="passed"><title>Passed: 4/7</title></path>
           <path class="status skipped" />
-          <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/1</title></path>
+          <path class="shadow skipped" data-status="skipped"><title>Skipped: 3/7</title></path>
         </svg>
       </div>
-      <div class="total-specs"><span class="value">1</span><span class="txt">Total specs</span></div>
+      <div class="total-specs"><span class="value">7</span><span class="txt">Total specs</span></div>
     </div>
     <div class="report_test-results">
       <ul>
-        <li class="fail spec-filter" data-status="failed"><span class="value">1</span><span class="txt">Failed</span></li>
-        <li class="pass spec-filter" data-status="passed"><span class="value">0</span><span class="txt">Passed</span></li>
-        <li class="skip spec-filter" data-status="skipped"><span class="value">0</span><span class="txt">Skipped</span></li>
+        <li class="fail spec-filter" data-status="failed"><span class="value">0</span><span class="txt">Failed</span></li>
+        <li class="pass spec-filter" data-status="passed"><span class="value">4</span><span class="txt">Passed</span></li>
+        <li class="skip spec-filter" data-status="skipped"><span class="value">3</span><span class="txt">Skipped</span></li>
       </ul>
     </div>
     <div class="report_details">
@@ -56,23 +56,21 @@
         </li>
         
         <li>
-          <label>Tags </label>
-          <span>ui</span>
-        </li>
-        
-        <li>
           <label>Success Rate </label>
-          <span>0%</span>
+          <span>57%</span>
         </li>
         <li>
           <label>Total Time </label>
-          <span>00:00:27</span>
+          <span>00:00:31</span>
         </li>
         <li>
           <label>Generated On </label>
-          <span>Apr 27, 2018 at 1:52pm</span>
+          <span>Jul 13, 2019 at 9:44pm</span>
         </li>
       </ul>
+      
+  
+
       
   
 
@@ -97,12 +95,66 @@
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
-          <a href="google.search.html">
-            
-              <li class='failed spec-name'>
+          <a href="google_puppeteer.html">
+             
+              <li class='skipped spec-name'>
             
               <span id="scenarioName" class="scenarioname">Search terms on google</span>
-              <span id="time" class="time">00:00:26</span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
+          <a href="../db/usermanagement.db.html">
+             
+              <li class='skipped spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">UserManagement DB Spec</span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
+          <a href="../mobile/mobile.html">
+             
+              <li class='skipped spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Mobile Spec</span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
+          <a href="angular_site.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">UI tests for Angular Web Site (https://angular.realworld.io)</span>
+              <span id="time" class="time">00:00:25</span>
+            </li>
+          </a>
+          
+          <a href="../dd/diseaseidentification.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Disease Identification tests for BCKC</span>
+              <span id="time" class="time">00:00:00</span>
+            </li>
+          </a>
+          
+          <a href="../rest/posts.ws.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Posts retrieval tests</span>
+              <span id="time" class="time">00:00:04</span>
+            </li>
+          </a>
+          
+          <a href="google.search.html">
+             
+              <li class='passed spec-name'>
+            
+              <span id="scenarioName" class="scenarioname">Search terms on google</span>
+              <span id="time" class="time">00:00:28</span>
             </li>
           </a>
           
@@ -117,11 +169,11 @@
   <div id="specificationContainer" class="details">
     <header class="curr-spec">
       <div class="spec-head-wrapper">
-        <h3 class="spec-head" title="D:\TCOE\TCOE_Practice\TCoE-Automation-Workspace\Agnes\specs\ui\google.search.md">Search terms on google</h3>
+        <h3 class="spec-head" title="D:\NitorGitHubRepos\bdd-gaugejs-framework\specs\ui\google.search.md">Search terms on google</h3>
         <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
-            <li class="fail"><span class="value">1</span><span class="txt">Failed</span></li>
-            <li class="pass"><span class="value">1</span><span class="txt">Passed</span></li>
+            <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
+            <li class="pass"><span class="value">5</span><span class="txt">Passed</span></li>
             <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
           </ul>
         </div>
@@ -129,12 +181,12 @@
       <div class="spec-meta">
         <div class="spec-filename">
           <label for="specFileName">File Path</label>
-          <input id="specFileName" value="D:\TCOE\TCOE_Practice\TCoE-Automation-Workspace\Agnes\specs\ui\google.search.md" readonly/>
+          <input id="specFileName" value="D:\NitorGitHubRepos\bdd-gaugejs-framework\specs\ui\google.search.md" readonly/>
           <button class="clipboard-btn" data-clipboard-target="#specFileName" title="Copy to Clipboard">
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:26</span>
+        <span class="time">00:00:28</span>
       </div>
 
 	
@@ -156,6 +208,7 @@
   
 
     
+    
 
     <div class="content">
     
@@ -163,29 +216,59 @@
   <span><p>This spec checks for posts public API</p>
 </span>
   
-  <span></span>
   
-  <span></span>
-  
+    <table class="data-table">
+      <tr>
+        <th>term</th>
+      </tr>
+      <tbody data-rowCount=4>
+        
+          <tr class='row-selector passed selected' data-rowIndex='0'>
+          
+            <td>machine learning</td>
+        </tr>
+        
+          <tr class='row-selector passed' data-rowIndex='1'>
+          
+            <td>firefox</td>
+        </tr>
+        
+          <tr class='row-selector passed' data-rowIndex='2'>
+          
+            <td>robotic process automation</td>
+        </tr>
+        
+          <tr class='row-selector passed' data-rowIndex='3'>
+          
+            <td>thoughtworks</td>
+        </tr>
+        
+      </tbody>
+    </table>
   
 
+  
+  <span></span>
   
 
       
         
 	
-  <div class='scenario-container failed'>
+  <div class='scenario-container passed' data-tablerow='0'>
     
 
 	
   <div class="scenario-head">
-    <h3 class="head borderBottom">Search on google page with term &#34;@#$@FWFW@@#&#34;</h3>
-    <span class="time">00:00:12</span>
+    <h3 class="head borderBottom">Verify that search of other multiple terms in single scenario is possible</h3>
+    <span class="time">00:00:14</span>
 
 	
   
 
 	</div>
+  
+  
+
   
   
 
@@ -201,7 +284,7 @@
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
+      <span class='time'>Execution Time : 00:00:04</span>
     </h5>
   
   <div class='step-info passed'>
@@ -210,6 +293,9 @@
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -237,8 +323,14 @@
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -260,10 +352,10 @@
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:12</span>
+      <span class='time'>Execution Time : 00:00:10</span>
     </h5>
   
-  <div class='step-info failed'>
+  <div class='step-info passed'>
   
   <ul>
     <li class='step'>
@@ -275,53 +367,32 @@
 
   
   
+
+  
+  
   
     
       <span>
-        Search term 
+        Search various terms 
       </span>
     
   
     
-      <span class='parameter'>"@#$#@$@$@"</span>
-    
-  
-    
-      <span>
-         and expect 
-      </span>
-    
-  
-    
-      <span class='parameter'>"Amazon.in"</span>
-    
-  
-    
-      <span>
-         as first result on google page
-      </span>
+      <span class='parameter'>"machine learning"</span>
     
   
   </div>
 
   
     
-        
-  <div class="error-container failed">
-    <div class="exception-container">
-        <div class="exception">
-          <h4 class="error-message">
-            <pre>Error: An element could not be located on the page using the given search parameters (&#34;h3.r a&#34;).</pre>
-          </h4>
-          <pre class="stacktrace">Error: An element could not be located on the page using the given search parameters (&#34;h3.r a&#34;).<br/>    at getText() - D:\TCOE\TCOE_Practice\TCoE-Automation-Workspace\Agnes\ui_page_objects\googlehome.page.js:61:34</pre>
-        </div>
-        
-    </div>
-  </div>
-
     
   
+
   
+  
+  
+  
+
   
   
 
@@ -352,6 +423,9 @@
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -369,8 +443,14 @@
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -387,24 +467,30 @@
   
   
 
+  
+  
+
 	
 	</div>
 
       
         
 	
-  <div class='scenario-container passed'>
+  <div class='scenario-container passed hidden' data-tablerow='1'>
     
 
 	
   <div class="scenario-head">
-    <h3 class="head borderBottom">Search on google page with term &#34;Amazon&#34;</h3>
+    <h3 class="head borderBottom">Verify that search of other multiple terms in single scenario is possible</h3>
     <span class="time">00:00:14</span>
 
 	
   
 
 	</div>
+  
+  
+
   
   
 
@@ -420,7 +506,7 @@
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:00</span>
+      <span class='time'>Execution Time : 00:00:04</span>
     </h5>
   
   <div class='step-info passed'>
@@ -429,6 +515,9 @@
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
 
   
   
@@ -456,8 +545,14 @@
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -479,7 +574,7 @@
   
   
     <h5 class='execution-time'>
-      <span class='time'>Execution Time : 00:00:14</span>
+      <span class='time'>Execution Time : 00:00:09</span>
     </h5>
   
   <div class='step-info passed'>
@@ -488,6 +583,453 @@
     <li class='step'>
       <div class='step-txt'>
 
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Search various terms 
+      </span>
+    
+  
+    
+      <span class='parameter'>"firefox"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Close Browser
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+
+  
+  
+
+  
+  
+
+	
+	</div>
+
+      
+        
+	
+  <div class='scenario-container passed hidden' data-tablerow='2'>
+    
+
+	
+  <div class="scenario-head">
+    <h3 class="head borderBottom">Verify that search of other multiple terms in single scenario is possible</h3>
+    <span class="time">00:00:12</span>
+
+	
+  
+
+	</div>
+  
+  
+
+  
+  
+
+	
+
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:02</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Open 
+      </span>
+    
+  
+    
+      <span class='parameter'>"chrome"</span>
+    
+  
+    
+      <span>
+         Browser
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:10</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Search various terms 
+      </span>
+    
+  
+    
+      <span class='parameter'>"robotic process automation"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Close Browser
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+
+  
+  
+
+  
+  
+
+	
+	</div>
+
+      
+        
+	
+  <div class='scenario-container passed'>
+    
+
+	
+  <div class="scenario-head">
+    <h3 class="head borderBottom">Search on google page with term &#34;Amazon&#34;</h3>
+    <span class="time">00:00:15</span>
+
+	
+  
+
+	</div>
+  
+  
+
+  
+  
+
+	
+
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:03</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Open 
+      </span>
+    
+  
+    
+      <span class='parameter'>"chrome"</span>
+    
+  
+    
+      <span>
+         Browser
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:11</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
 
   
   
@@ -525,8 +1067,14 @@
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -563,6 +1111,9 @@
 
   
   
+
+  
+  
   
     
       <span>
@@ -574,8 +1125,14 @@
 
   
     
+    
+  
+
   
   
+  
+  
+
   
   
 
@@ -592,6 +1149,231 @@
   
   
 
+  
+  
+
+	
+	</div>
+
+      
+        
+	
+  <div class='scenario-container passed hidden' data-tablerow='3'>
+    
+
+	
+  <div class="scenario-head">
+    <h3 class="head borderBottom">Verify that search of other multiple terms in single scenario is possible</h3>
+    <span class="time">00:00:13</span>
+
+	
+  
+
+	</div>
+  
+  
+
+  
+  
+
+	
+
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:03</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Open 
+      </span>
+    
+  
+    
+      <span class='parameter'>"chrome"</span>
+    
+  
+    
+      <span>
+         Browser
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+  
+    
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:10</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Search various terms 
+      </span>
+    
+  
+    
+      <span class='parameter'>"thoughtworks"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+  
+    <div class='context-step'>
+      
+  
+    
+  
+  <div class='step'>
+  
+  
+    <h5 class='execution-time'>
+      <span class='time'>Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class='step-info passed'>
+  
+  <ul>
+    <li class='step'>
+      <div class='step-txt'>
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+    
+      <span>
+        Close Browser
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+    </div>
+  
+
+  
+  
+
+  
+  
+
 	
 	</div>
 
@@ -603,6 +1385,7 @@
     
   
 
+    
     
     </div>
   
@@ -621,15 +1404,15 @@
 
 	
     <script type="text/javascript">
-      var loadingImage = "..\../images/loading.gif";
-      var closeButton = "..\../images/close.gif";
+      var loadingImage = "../../images/loading.gif";
+      var closeButton = "../../images/close.gif";
     </script>
-    <script src="..\../js/lightbox.js"></script>
-    <script src="..\../js/jquery-3.1.0.min.js" type="text/javascript"></script>
-    <script src="..\../js/auto-complete.min.js" type="text/javascript"></script>
-    <script src="..\../js/clipboard.min.js" type="text/javascript"></script>
-    <script src="..\../js/search_index.js" type="text/javascript"></script>
-    <script src="..\../js/main.js" type="text/javascript"></script>
+    <script src="../../js/lightbox.js"></script>
+    <script src="../../js/jquery-3.1.0.min.js" type="text/javascript"></script>
+    <script src="../../js/auto-complete.min.js" type="text/javascript"></script>
+    <script src="../../js/clipboard.min.js" type="text/javascript"></script>
+    <script src="../../js/search_index.js" type="text/javascript"></script>
+    <script src="../../js/main.js" type="text/javascript"></script>
     </body>
   </html>
 

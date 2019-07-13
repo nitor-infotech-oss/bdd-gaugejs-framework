@@ -1,41 +1,40 @@
-import LoginPage from '../ui_page_objects/login.page';
 import GoogleHomePage from '../ui_page_objects/googlehome.page';
-import DataReader from '../common/data.readers.lib';
 import Logger from '../common/logger.lib';
-
-var fs =  require('fs');
 
 var chai = require('chai');
 var chaiAsPromised = require('chai-as-promised');
 
 chai.use(chaiAsPromised);
 expect = chai.expect;
-chai.Should();
 
-var assert = require("assert");
-
-gauge.step("Search term <term> and expect <expTerm> as first result on google page", function (term,expTerm,done) {
-    try{
-		var homeUrl = process.env.GOOGLE_BASE_URI;
-		browser = gauge.dataStore.scenarioStore.get("browser");
-		var homeObj = new GoogleHomePage(browser);
-		homeObj.open(homeUrl).then(() => {
-			homeObj.search(term).then(() =>{
-				Logger.logDebug("Page loaded:");
-				homeObj.getFirstSearchResult().then((text)=>{
-					expect(expTerm).to.equal(text);
-				done();
-        }).catch(function(e){Logger.logError(e); done(e);});
-			}).catch(function(e){Logger.logError(e); done(e);});
-		}).catch(function(e){Logger.logError(e); done(e);});
-	}catch(e){
-		Logger.logError(e);
-		done(e);
-	}
-
+step("Search term <term> and expect <expTerm> as first result on google page", async function (term,expTerm) {
+    let homeUrl = process.env.GOOGLE_BASE_URI;
+		let driver = gauge.dataStore.scenarioStore.get("driver");
+		let homeObj = new GoogleHomePage(driver);
+		await homeObj.open(homeUrl);
+		Logger.logDebug("URL opened:" + homeUrl);
+		await homeObj.search(term);
+		await homeObj.waitForSearchResultsToLoad(term, 20000);
+		let actualTerm = await homeObj.firstSearchResult.getText();
+		expect(actualTerm).to.have.string(expTerm);
+	
 });
 
-gauge.step("Login to member portal with credentials <userfile>", function(userfile,done){
+step("Search various terms <term>", async function (term) {
+    let homeUrl = process.env.GOOGLE_BASE_URI;
+		let driver = gauge.dataStore.scenarioStore.get("driver");
+		let homeObj = new GoogleHomePage(driver);
+		await homeObj.open(homeUrl);
+		await homeObj.search(term);
+		await homeObj.waitForSearchResultsToLoad(term, 20000);
+		let actualTerm = await homeObj.firstSearchResult.getText();
+		expect(actualTerm).to.not.be.null;
+	
+});
+
+
+
+/* gauge.step("Login to member portal with credentials <userfile>", function(userfile,done){
 	console.log("start reading file:" + userfile);
 	var contentsObj;
 	var readerObj = new DataReader();
@@ -50,30 +49,5 @@ gauge.step("Login to member portal with credentials <userfile>", function(userfi
 	   done();
 	}).catch(function(e){Logger.logError(e); done(e);});
 
-});
+}); */
 
-gauge.step("Login to member portal with <username> and <password>", function(username,password,done){
-	console.log("in next step");
-	var loginObj = new LoginPage(gauge.dataStore.scenarioStore.get("browser"));
-	loginObj.signIn(username,password).then(function(){
-	   Logger.logInfo("In Member Portal");
-	   done();
-	}).catch(function(e){Logger.logError(e); done(e);});
-});
-
-gauge.step("Check trademark label is <trademarkLabel>", function(trademarkLabel,done){
-	var dasboardPageObj = new DashboardPage(gauge.dataStore.scenarioStore.get("browser"));
-	dasboardPageObj.waitForTrademarkLoad(5000).then(function(){
-		dasboardPageObj.trademark.getValue().then(function(val){
-			Logger.logInfo(val);
-			try {
-					assert(val).to.equal(trademarkLabel);
-				} catch (e) {
-					Logger.logError(e);
-					dasboardPageObj.close();
-					done(e);
-				}
-			done();
-		}).catch(function(e){Logger.logError(e); done(e);});
-	}).catch(function(e){Logger.logError(e); done(e);});
-});

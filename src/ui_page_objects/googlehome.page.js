@@ -1,36 +1,24 @@
 import Page from "./page";
 import Logger from '../common/logger.lib';
+const {Builder, By, Key, until} = require('selenium-webdriver');
 
 export default class GoogleHomePage extends Page {
-	constructor(browser) {
-		super(browser);
+	constructor(driver) {
+		super(driver);
 	}
 
-	get searchField() {return this.browser.element("#lst-ib");}
-	get searchBtn() {return this.browser.element("input[value='Google Search']"); }
-	get firstSearchResult() {return this.browser.element("h3.r a");}
+	get searchField() {return this.driver.findElement(By.name("q"));}
+	get searchBtn() {return this.driver.findElement(By.xpath("//input[@value='Google Search']")); }
+	get firstSearchResult() {return this.driver.findElement(By.css("h3.LC20lb"));}
 
-	search(term) {
-		return this.searchField.setValue(term).then(()=>{
-			return this.searchBtn.click();
-		}).catch((e)=>{Logger.logError(e);});
+	async search(term) {
+		await this.searchField.sendKeys(term);
+		await this.driver.wait(until.elementIsVisible(this.searchBtn), 20000);
+		await this.searchBtn.click();
 	}
 
-	waitForSearchResultsToLoad(term,time){
-		Logger.logInfo("Wait for search results");
-		return this.browser.waitUntil(() => {
-			return this.browser.url().then((url) => {
-				Logger.logDebug(url);
-				return url.value.indexOf(term) > -1;
-			});
-		}, time);
-	}
-
-	getFirstSearchResult(){
-		return this.firstSearchResult.getText().then((txt) => {
-			Logger.logDebug(txt);
-			return txt;
-		});
+	async waitForSearchResultsToLoad(term,time){
+		await this.driver.wait(until.titleContains(term), time);
 	}
 
 }

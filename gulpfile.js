@@ -46,11 +46,15 @@ gulp.task('transpile', () => {
 });
 
 gulp.task('test',['transpile'], shell.task([
-  'gauge --env qa --verbose --tags test specs/'
+  'gauge --env qa --log-level debug --tags test specs/'
+]));
+
+gulp.task('parallelTest',['transpile'], shell.task([
+  'gauge run --parallel -n=4 --env qa --log-level debug specs/'
 ]));
 
 gulp.task('uiTest',['transpile'], shell.task([
-  'gauge run --env qa --verbose --tags ui specs/'
+  'gauge run --env qa --log-level debug --tags angular specs/'
 ]));
 
 gulp.task('dbTest',['transpile'], shell.task([

@@ -2,7 +2,7 @@ var winston = require('winston');
 winston.configure({
     transports: [
     new (winston.transports.File)({ filename: './logs/RunLog.log',level:'debug'}),
-	  new (winston.transports.Console)({level:'info'})
+	  new (winston.transports.Console)({level:'debug'})
     ]
   });
 

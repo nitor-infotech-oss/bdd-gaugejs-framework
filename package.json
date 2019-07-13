@@ -19,6 +19,7 @@
     "gulp-shell": "^0.5.2",
     "pg": "^6.4.0",
     "selenium-standalone": "^6.16.0",
+    "selenium-webdriver": "^4.0.0-alpha.4",
     "sync-request": "^4.0.1",
     "webdriverio": "^4.8.0",
     "winston": "^2.3.1",

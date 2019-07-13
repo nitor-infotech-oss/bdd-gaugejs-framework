@@ -1,1 +1,1 @@
-var index = {"Tags":{"test":["specs\\ui\\google.search.html"],"ui":["specs\\ui\\google.search.html"]},"Specs":{"Search terms on google":["specs\\ui\\google.search.html"]}};
+var index = {"Tags":{"angular":["specs/ui/angular_site.html"],"test":["specs/ui/angular_site.html"],"ui":["specs/ui/angular_site.html"]},"Specs":{"UI tests for Angular Web Site (https://angular.realworld.io)":["specs/ui/angular_site.html"]}};

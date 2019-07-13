@@ -1,4 +1,4 @@
-import LoginService from '../rest_service_objects/login.service';
+/* import LoginService from '../rest_service_objects/login.service';
 
 var chai = require('chai');
 var chaiAsPromised = require('chai-as-promised');
@@ -22,3 +22,4 @@ gauge.step("Do login with rest call", function(done){
     expect(token).to.not.be.null;
 	done();
 });
+ */

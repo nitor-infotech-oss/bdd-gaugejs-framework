@@ -1,18 +1,15 @@
 export default class Page {
-     constructor(browser) {
-        this._browser = browser;
+     constructor(driver) {
+        this._driver = driver;
 	 }
-	 get browser(){
-		 return this._browser;
+	 get driver(){
+		return this._driver;
 	 }
-	 open(url) {
-          return this._browser
-                     .url(url);
+	 async open(url) {
+          return await this._driver.get(url);
      }
 
-     close(done) {
-          return this._browser
-                     .end()
-                     .call(done);
+     async close(done) {
+          return await this._driver.quit();
      }
 }
