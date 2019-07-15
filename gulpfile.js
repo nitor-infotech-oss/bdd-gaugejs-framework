@@ -53,6 +53,10 @@ gulp.task('parallelTest',['transpile'], shell.task([
   'gauge run --parallel -n=4 --env qa --log-level debug specs/'
 ]));
 
+gulp.task('puppeteerTest',['transpile'], shell.task([
+  'gauge run --env qa --log-level debug --tags puppeteer specs/'
+]));
+
 gulp.task('uiTest',['transpile'], shell.task([
   'gauge run --env qa --log-level debug --tags angular specs/'
 ]));

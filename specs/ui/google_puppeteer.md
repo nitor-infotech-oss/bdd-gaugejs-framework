@@ -1,8 +1,7 @@
-# Search terms on google
+# Tests with Puppeteer
 This spec checks for posts public API
 
 Tags:puppeteer,test
 
-## Search on google page with term "Amazon"
-* Open "chrome" Browser from Puppeteer
-* Close Browser from Puppeteer
+## Verify images from different viewports
+* Do responsive checks using puppeteer

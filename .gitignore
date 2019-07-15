@@ -3,4 +3,7 @@ tests
 ui_page_objects
 rest_service_objects
 common
-mobile_screen_objects
+mobile_page_objects
+reports
+db_query_objects
+

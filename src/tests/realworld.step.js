@@ -28,6 +28,32 @@ step("Verify that global feed section is loading", async function () {
     let driver = gauge.dataStore.scenarioStore.get("driver");
     let dashboardPage = new RealWorldDashboardPage(driver);
     await dashboardPage.globalFeedLink.click();
-
-	
+    Logger.logDebug("Global Feed Clicked");
+    await driver.sleep(5000);
+    await dashboardPage.waitForFeedsToLoad(20000);
+    expect(dashboardPage.readMoreLink.getText()).to.not.be.null;
 });
+
+step("Add articles with following details <table>", async function (table) {
+    let driver = gauge.dataStore.scenarioStore.get("driver");
+    const start = async () => {
+        await asyncForEach(table.rows, async (article) => {
+            Logger.logDebug(article.cells[0] + article.cells[1] + article.cells[2] + article.cells[3]);
+            let dashboardPage = new RealWorldDashboardPage(driver);
+            await driver.sleep(5000);
+            Logger.logDebug(driver);
+            Logger.logDebug(dashboardPage);
+            await dashboardPage.newArticleLink.click();
+            await dashboardPage.publishNewArticle(article.cells[0], article.cells[1], 
+                                                article.cells[2], article.cells[3]);
+            await driver.sleep(3000);
+        });
+    }
+    start(driver);
+});
+
+async function asyncForEach(array, callback) {
+  for (let index = 0; index < array.length; index++) {
+    await callback(array[index], index, array);
+  }
+}
