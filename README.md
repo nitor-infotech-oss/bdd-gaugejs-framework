@@ -1,5 +1,7 @@
 # Agnes Test Automation Framework and TestSuite
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/nitor-infotech-oss/bdd-gaugejs-framework.svg)](https://greenkeeper.io/)
+
 ## Table of Contents
 - [Agnes Middleware Test Automation Framework and TestSuite](#agnes-test-automation-framework-and-testsuite)
   * [Setup](#setup)
